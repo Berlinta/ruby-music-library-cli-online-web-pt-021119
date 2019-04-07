@@ -47,6 +47,10 @@ require 'pry'
    end
   end
   
+  def list_artists
+    
+  end
+  
   
   
   
