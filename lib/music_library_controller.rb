@@ -80,7 +80,7 @@ if genre = Genre.find_by_name(input)
 end
 
 def play_song
-  
+  puts "Which song number would you like to play?"
 end
     
     
