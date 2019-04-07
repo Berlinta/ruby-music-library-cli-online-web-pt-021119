@@ -42,7 +42,8 @@ require 'pry'
   end
   
   def list_songs
-    
+    Song.all.sort {|n,b| n.name <=> b.name}.each.with_index(1) do |song, index|
+    puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   end
   
   
