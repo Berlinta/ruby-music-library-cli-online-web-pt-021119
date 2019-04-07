@@ -73,6 +73,7 @@ def list_songs_by_genre
   input = gets.strip
     
 if genre = Genre.find_by_name(input)
+  #binding.pry
   genre.songs.sort{|x, y| x.name <=> y.name}.each.with_index(1) do |song, index|
      puts "#{index}. #{song.artist.name} - #{song.name}"
     end
@@ -82,12 +83,12 @@ end
 def play_song
   puts "Which song number would you like to play?"
   input = gets.strip.to_i
-  
+  #binding.pry
   if input > 0 and input <= Song.all.size
     songs = Song.all.sort_by {|s| s.name}
     song = songs[input - 1]
     puts "Playing #{song.name} by #{song.artist.name}"
+   end
   end
  end
-end
 end
