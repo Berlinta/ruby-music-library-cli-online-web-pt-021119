@@ -86,10 +86,8 @@ def play_song
   if input > 0 and input <= Song.all.size
     songs = Song.all.sort_by {|s| s.name}
     song = songs[input - 1]
-    
+    puts "Playing #{song.name} by #{song.artist.name}"
   end
-  
-  
 end
     
     
