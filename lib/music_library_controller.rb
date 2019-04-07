@@ -79,6 +79,9 @@ if genre = Genre.find_by_name(input)
   end
 end
 
+def play_song
+  
+end
     
     
     
