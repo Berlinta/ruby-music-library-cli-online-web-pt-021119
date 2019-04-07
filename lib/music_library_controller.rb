@@ -83,8 +83,8 @@ def play_song
   puts "Which song number would you like to play?"
   input = gets
   
-  if (1..Song.all.length).include?(input)
-    song = Song.all.sort{ |x, y| x.name <=> y.name }[input - 1]
+  if input > 0 and input <= Song.all.size
+    
   end
   
   
