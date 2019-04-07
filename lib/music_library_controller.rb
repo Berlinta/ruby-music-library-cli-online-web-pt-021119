@@ -48,8 +48,10 @@ require 'pry'
   end
   
   def list_artists
-    
+      Artist.all.sort {|n,b| n.name <=> b.name}.each.with_index(1) do |artist, index|
+    puts "#{index}. #{artist.name}"
   end
+ end
   
   
   
