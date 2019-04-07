@@ -84,7 +84,7 @@ def play_song
   input = gets
   
   if input > 0 and input <= Song.all.size
-    
+    songs = Song.all.sort_by {|s| s.name}
   end
   
   
