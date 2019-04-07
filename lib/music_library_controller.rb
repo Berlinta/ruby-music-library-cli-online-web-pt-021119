@@ -81,7 +81,7 @@ end
 
 def play_song
   puts "Which song number would you like to play?"
-  input = gets
+  input = gets.strip.to_i
   
   if input > 0 and input <= Song.all.size
     songs = Song.all.sort_by {|s| s.name}
